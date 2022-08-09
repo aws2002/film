@@ -10,18 +10,19 @@ body {
 }
 
 .search {
-    background-color: transparent;
+    
     border: 2px solid #333;
     padding: 0.5rem 1rem;
     border-radius: 5px;
     font-size: 1rem;
-    color: #000;
+    border: 1px solid #fff !important;
     font-family: inherit;
+    color: #fff;
 }
 
 .search:focus {
     outline: 0;
-    background-color: #fff;
+    
 }
 
 .search::placeholder {
@@ -386,13 +387,15 @@ body {
 .embed.show {
     display: inline-block;
 }
-footer{
+
+footer {
     text-align: center;
     margin-bottom: 20px;
     color: #4dbf00;
     letter-spacing: 3px;
     font-weight: 500;
 }
+
 #scroll-to-top {
     position: fixed;
     right: 30px;
@@ -416,32 +419,63 @@ footer{
     -ms-transition: 0.5s;
     -o-transition: 0.5s;
     pointer-events: none;
-  }
-  
-  #scroll-to-top.not-active {
+}
+
+#scroll-to-top.not-active {
     opacity: 1;
     pointer-events: all;
-  }
-  
-  #scroll-to-top i {
+}
+
+#scroll-to-top i {
     transition: 0.3s;
     -webkit-transition: 0.3s;
     -moz-transition: 0.3s;
     -ms-transition: 0.3s;
     -o-transition: 0.3s;
-  }
-  
-  #scroll-to-top:hover i {
+}
+
+#scroll-to-top:hover i {
     transform: translateY(-4px);
     -webkit-transform: translateY(-4px);
     -moz-transform: translateY(-4px);
     -ms-transform: translateY(-4px);
     -o-transform: translateY(-4px);
-  }
+}
+
+.wrapper {
+    border-radius: 5px;
+    box-shadow: 0px 1px 5px 3px rgba(0, 0, 0, 0.15);
+    position: relative;
+    width: 450px;
+}
+.wrapper input {
+    width: 100%;
+    border: none;
+    background-color: #000 !important;
+    height: 40px;
+    padding: 0px 40px 0px 10px;
+    font-size: 18px;
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.1);
+}
+.results {
+    background-color: #fff;
+    padding: 0px;
+    position: absolute;
+    top: 40px;
+    z-index: 1000;
+    width: 100%;
+}
+.results a{
+    display: block;
+    text-decoration: none;
+    margin: 10px ;
+}
+
 @media screen and (max-width:767px) {
     .menu-container {
         margin-left: 15px;
     }
+
     .overlay a {
         font-size: 20px;
     }
